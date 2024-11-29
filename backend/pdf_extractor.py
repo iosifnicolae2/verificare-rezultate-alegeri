@@ -196,7 +196,7 @@ def process_file(file_data, headers, processed_files):
         
         if not is_matching:
             print(f"The votes don't match for {id}")
-            os.makedirs("problems", exist_ok=True)
+            os.makedirs("data/problems", exist_ok=True)
             with open(f"data/problems/{id}.json", 'w', encoding='utf-8') as f:
                 json.dump(content, f, indent=2, ensure_ascii=False)
         
